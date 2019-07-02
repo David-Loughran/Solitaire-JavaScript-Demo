@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Solitaire</title>
+		<script type="text/javascript" src="js/solitaire.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/solitaire.css"></link>
+	</head>
+	<body>
+		<div class="container">
+				<div class="endFields" id="endZoneHeart" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:red;">&#9829</div></div>
+				<div class="endFields" id="endZoneDiamond" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:red;">&#9830;</div></div>
+				<div class="endFields" id="endZoneClub" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign">&#9827</div></div>
+				<div class="endFields" id="endZoneSpade" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign">&#9824</div></div>
+		</div>
+		<div class="deckSpot">
+			<div id="deckDown"></div>
+			<div id="deckUp"></div>
+		</div>
+		<!--<div class="dragCards" id="dragCard2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div class="dragCards" id="dragCard1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+		<div class="playArea">
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column1"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column2"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column3"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column4"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column5"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column6"></div></div>
+				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column7"></div></div>
+		</div>
+		<button id="btn" onclick="begin()">Deal</button>
+	</body>
+</html>

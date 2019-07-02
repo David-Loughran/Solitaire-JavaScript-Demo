@@ -1,0 +1,78 @@
+body{
+	background-color: green;
+}
+
+div.container{
+
+}
+
+div.endFields{
+	width: 140px;
+	height: 200px;
+	border: 4px  solid #d5e6e1;
+	float: right;
+	/*background-color: blue;*/
+	/*text-align: center;*/
+	/*margin: auto;*/
+	position: relative;
+}
+
+div.innerDesign{
+	/*height: 25px;
+	width: 25px;
+	background-color: #d5e6e1;
+	border-radius: 50%;
+	/*display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;*/
+	font-size: 100px;
+	text-align: center;
+}
+
+div.deckSpot{
+	float: left;
+	width: 300px;
+	height: 400px;
+}
+
+div.playArea{
+	width: 98%;
+	height: 62%;
+	border: 4px  solid #076e03;
+	background-color: #076e03;
+	position: absolute;
+	bottom: 0;
+}
+
+div.columns{
+	width: 160px;
+	height: 300px;
+	border: 2px solid black;
+	float: right;
+}
+
+div.dragCards{
+	width: 127px;
+	height: 181px;
+	border: 2px solid black;
+	background-color: white;
+}
+
+#deckDown{
+	width: 140px;
+	height: 200px;
+	border: 4px  solid #d5e6e1;
+	float: left;
+}
+
+#deckUp{
+	width: 140px;
+	height: 200px;
+	border: 4px  solid #d5e6e1;
+	float: right;
+}
+
+#endZoneHeart{
+	
+}
