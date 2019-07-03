@@ -17,11 +17,16 @@ function drop(event) {																	//this function accepts the draggable ite
 	event.preventDefault();
 	var dropID = event.target.id;
 	var data = event.dataTransfer.getData("text");
+	
 	console.log(data);
 		event.target.appendChild(document.getElementById(data)); 			//add the div currently being moved to the target div
-		if (dropID == "endZoneHeart"){
-		//dragCard1.setAttribute('draggable', false);								//disabling drag feature on target div
-		}
+		debugger;
+		//for (var i=0; i<7; i++){
+			//if (dropID == "column" + (i+1)){
+				//mess with this
+			//dropID.setAttribute(hasCard, true);								//disabling drag feature on target div
+		//}
+		//}
 }
 
 function begin(){											//start basic game functions
@@ -42,7 +47,17 @@ function begin(){											//start basic game functions
 
 function deal(i, card){									//place cards in target divs
 	var columnID = "column" + (i+1);
-	document.getElementById(columnID).appendChild(card);
+	//debugger;
+	var check = document.getElementById(columnID).getAttribute("hasCard");
+//	debugger;
+		if (check == "False"){ //mess with this
+			document.getElementById(columnID).appendChild(card);
+			document.getElementById(columnID).setAttribute("hasCard", true);
+		}
+		else {
+			
+		}
+		//debugger;
 }
 
 //generate standard 52 card deck
@@ -70,8 +85,11 @@ function generateDeck(deck){
 			card.innerHTML = (i+ placer) + symbol;
 			if (suit == 'H' || suit == 'D'){
 				card.style.color = "red";
+			} else if (suit == 'C' || suit == 'S'){
+				card.style.color = "black";
 			}
 			card.setAttribute("draggable", true);								//make card draggable
+			card.setAttribute("hasCard", "False")
 			card.addEventListener("drop", drop, false);					//when drop is initiated on card, enables dropping
 			card.addEventListener("dragstart", drag, false);				//when drag is initiated on card, enables dragging
 			deck[i] = card;															//sort cards into deck
