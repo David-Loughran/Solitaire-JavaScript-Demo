@@ -7,25 +7,27 @@
 	</head>
 	<body>
 		<div class="container">
-				<div class="endFields" id="endZoneHeart" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:red">&#9829</div></div>
-				<div class="endFields" id="endZoneDiamond" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:red">&#9830;</div></div>
-				<div class="endFields" id="endZoneClub" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:black">&#9827</div></div>
-				<div class="endFields" id="endZoneSpade" ondrop="drop(event)" ondragover="allowDrop(event)"><div class="innerDesign" style="color:black">&#9824</div></div>
+				<div class="endFields" id="endZoneHeart" ondrop="drop(event)" ondragover="allowDrop(event)" holder="red" hasCard=false style="color:red">&#9829  <!--<div class="innerDesign" style="color:red">&#9829</div>--></div>
+				<div class="endFields" id="endZoneDiamond" ondrop="drop(event)" ondragover="allowDrop(event)" holder="red" hasCard=false style="color:red">&#9830; <!--<div class="innerDesign" style="color:red">&#9830;</div>--></div>
+				<div class="endFields" id="endZoneClub" ondrop="drop(event)" ondragover="allowDrop(event)" holder="black" hasCard=false style="color:black">&#9827 <!--<div class="innerDesign" style="color:black">&#9827</div>--></div>
+				<div class="endFields" id="endZoneSpade" ondrop="drop(event)" ondragover="allowDrop(event)" holder="black" hasCard=false style="color:black">&#9824 <!--<div class="innerDesign" style="color:black">&#9824</div>--></div>
 		</div>
 		<div class="deckSpot">
 			<div id="deckDown"></div>
 			<div id="deckUp"></div>
+			<button id="nextCard" onclick="checkCard()">Flip</button>
 		</div>
+		
 		<!--<div class="dragCards" id="dragCard2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 		<div class="dragCards" id="dragCard1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
 		<div class="playArea">
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column1" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column2" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column3" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column4" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column5" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column6" hasCard="False"></div></div>
-				<div class="columns" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="column7" hasCard="False"></div></div>
+				<div class="columns" id="column7" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column6" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column5" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column4" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
+				<div class="columns" id="column1" ondrop="drop(event)" ondragover="allowDrop(event)" holder="green" hasCard=false></div>
 		</div>
 		<button id="btn" onclick="begin()">Deal</button>
 	</body>
